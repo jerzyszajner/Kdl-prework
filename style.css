@@ -11,8 +11,7 @@ body {
     color: #3d3d3d;
     font-size: 16px;
     line-height: 1.7;
-    font-family: 'Open Sans', sans-serif;
-    
+    font-family: 'Open Sans', sans-serif;    
 }
 
 .container {
@@ -42,6 +41,7 @@ section {
     transform: translateX(-50%);
     background: #FEB406;
 }
+
 /* Splash */
 
 .splash {
@@ -118,8 +118,7 @@ section {
 /* About */
 
 .about {
-    background: #fff;    
-    
+    background: #fff;       
 }
 
 .motivation {
@@ -222,9 +221,6 @@ section {
     cursor: pointer;   
 }
 
-
-
-
 .layer button {
     position: absolute;
     top: 50%;
@@ -236,7 +232,6 @@ section {
     border-radius: 10px;
     cursor: pointer;
 }
-
 
 .portfolio-image:hover .layer {
     opacity: 1;
@@ -275,7 +270,5 @@ section {
 .page-footer {
     background: #242424;
     padding: 5px 20px;
-    color: #fff
-
-    
+    color: #fff    
 }
