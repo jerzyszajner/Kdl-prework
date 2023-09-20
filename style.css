@@ -1,0 +1,281 @@
+/* Global */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 108px 0;  
+}
+
+.section-title {
+    position: relative;
+    font-size: 36px;
+    margin: 0 0 60px 0; 
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: #FEB406;
+}
+/* Splash */
+
+.splash {
+    height: 100vh;
+    position: relative; 
+    background-image: url('https://i.postimg.cc/YqLywW0d/pexels-naren-yogarajah-4150061.jpg');  
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.splash-inner {
+     position: absolute;
+     width: 100%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);  
+}
+
+.splash i {
+    font-size: 30px;
+    background: color-main;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #FEB406;
+    border-radius: 50%;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 50px;
+    margin: 48px 0 0 0;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.page-title::after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: #FEB406;
+}
+
+.page-subtitle {
+    color: #fff;
+    font-size: 18px;
+    margin: 48px 0 0 0;
+}
+    
+  /* Intro */
+  
+.intro {
+    background: #fff;    
+}
+
+.intro p {
+    width: 70%;
+    margin: 0 auto;
+    padding: 48px 0;
+    font-size: 24px;
+    border-top: 2px solid #FEB406;
+    border-bottom: 2px solid #FEB406;
+}
+
+.green {
+    color: green;
+}
+
+/* About */
+
+.about {
+    background: #fff;    
+    
+}
+
+.motivation {
+    font-weight: bold;
+    font-size: 25px;
+    color: green;  
+}
+
+/* Skills */
+
+.skills ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+ .skills ul li {
+    position: relative;
+}
+
+.skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;   
+}
+
+.skill-image img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;  
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.skill-right .skill-image {
+    right: 0;   
+}
+
+.skill-right .skill-description {
+    padding: 150px 55% 150px 0;    
+    text-align: right;
+}
+
+.skill-left .skill-image {
+    left: 0;
+}
+
+.skill-left .skill-description {
+    padding: 150px 0 150px 55%; 
+    text-align: left;    
+}
+
+.skill-image img:hover {
+    transform: scale(1.2);
+}
+
+/* Portfolio */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    float: left;
+    padding: 0;
+}
+
+.portfolio-position {
+    width: 33.3333%;
+    list-style-type: none;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-image {
+    position: relative; 
+    width: auto;
+    height: 500px;
+}
+
+.layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center; 
+    opacity: 0;
+    background: rgb(0,0,0,0.5);
+    transition: opacity 0.3s ease;
+    cursor: pointer;   
+}
+
+
+
+
+.layer button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.portfolio-image:hover .layer {
+    opacity: 1;
+}
+
+.view-more-button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;    
+}
+
+/* Contact */
+
+.contact {
+    background: #d2dae2;
+}
+
+.your-name, .your-email, .your-subject, .your-message {
+    margin-bottom: 15px;
+    border: 3px solid;
+    border-color: transparent;
+}
+
+.submit-button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;    
+}
+
+/* Footer */
+
+.page-footer {
+    background: #242424;
+    padding: 5px 20px;
+    color: #fff
+
+    
+}
