@@ -1,4 +1,3 @@
-# kdl-prework  x
-https://github.com/jerzyszajner/kdl-prework.git
+# kdl-prework
 
-https://jerzyszajner.github.io/kdl-prework/index.html
+[https://jerzyszajner.github.io/kdl-prework/index.html](KDL Prework)
