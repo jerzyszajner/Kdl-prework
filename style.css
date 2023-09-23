@@ -1,45 +1,117 @@
 /* Global */
 
-*, *::before, *::after {
+*, *::before, *::after {        /* Resetuje ustawienia box-sizing dla wszystkich elementów */
 	box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    text-align: center;
-    background: #fff;
-    color: #3d3d3d;
-    font-size: 16px;
-    line-height: 1.7;
-    font-family: 'Open Sans', sans-serif;    
+body {      /* Ogólne ustawienia dla ciała dokumentu */
+    margin: 0;      /* Usuwa domyślny margines */
+    text-align: center;     /* Centruje tekst */
+    background: #fff;       /* Ustawia kolor tła na biały */
+    color: #3d3d3d;     /* Ustawia kolor tekstu */
+    font-size: 16px;        /* Ustawia rozmiar czcionki */
+    line-height: 1.7;       /* Ustawia wysokość linii tekstu */
+    font-family: 'Open Sans', sans-serif;       /* Ustawia rodzaj czcionki */  
 }
 
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
+.container {        /* Kontener dla treści */
+    max-width: 1140px;      /* Maksymalna szerokość kontenera */
+    margin: 0 auto;     /* Wyśrodkowuje kontener na środku */
+    padding: 0 20px;        /* Odstęp wewnątrz kontenera */
 }
 
-section {
-    padding: 108px 0;  
+section {       /* Styl dla sekcji */
+    padding: 108px 0;        /* Odstępy wewnątrz sekcji */
+} 
+
+.section-title {         /* Styl dla tytułu sekcji */
+    position: relative;     /* Pozycja względem rodzica */
+    font-size: 36px;        /* Wielkość czcionki */
+    margin: 0 0 60px 0;     /* Odstępy wokół tytułu */ 
+    font-family: 'Josefin Sans', sans-serif;        /* Rodzaj czcionki */
 }
 
-.section-title {
-    position: relative;
-    font-size: 36px;
-    margin: 0 0 60px 0; 
-    font-family: 'Josefin Sans', sans-serif;
+.section-title::after {     /* Dekoracyjna linia pod tytułem sekcji */
+    position: absolute;     /* Pozycjonuje linie */     
+    content: '';        /* Treść pusta, ponieważ jest to dekoracyjny element */
+    bottom: -12px;      /* Pozycja od dolu */
+    left: 50%;      /* Centrowanie linii */
+    width: 50px;        /* Szerokość linii */
+    height: 10px;       /* Wysokość linii */
+    transform: translateX(-50%);        /* Centrowanie za pomocą transformacji */
+    background: #FEB406;        /* Kolor tła linii */
 }
 
-.section-title::after {
-    position: absolute;
-    content: '';
-    bottom: -12px;
-    left: 50%;
-    width: 50px;
-    height: 10px;
-    transform: translateX(-50%);
-    background: #FEB406;
+/* Dark mode */
+
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #b5b5b5;
+}
+
+.dark-mode .section-title::after {
+    background: #555;
+}
+
+.dark-mode .splash {
+    filter: brightness(0.7);
+}
+
+.dark-mode .page-title::after {
+    background: #555;
+}
+
+.dark-mode .green {
+    color: #a5d6a7;
+}
+
+.dark-mode .motivation {
+    color: #a5d6a7;
+}
+
+.dark-mode .contact {
+    background: #2f2f2f;
+}
+
+.dark-mode .page-footer {
+    background: #1a1a1a;
+}
+
+.dark-mode .intro, .dark-mode .about {
+    background-color: #333;
+    color: #b5b5b5;
+}
+
+.dark-mode .intro p {
+    border-color: #555;
+}
+
+/* Dark mode button */
+
+#toggleTheme {
+    padding: 5px 20px; /* Daje przyciskowi trochę odstępu wewnątrz */
+    border: none; /* Usuwa domyślną ramkę przycisku */    
+    color: #fff; /* Ustawia kolor tekstu przycisku na biały */
+    cursor: pointer; /* Zmienia kursor na wskaźnik, gdy najedziemy na przycisk */
+    border-radius: 10px; /* Zaokrągla narożniki przycisku */
+    transition: background-color 0.3s; /* Dodaje animację dla koloru tła */
+    opacity: 0.4;
+    background: rgb(0,0,0,0.5);
+    transform: translateY(-70%); /* Chowa przycisk o 80% do góry */
+    transition: transform 0.3s ease; /* Płynna animacja */
+}
+
+
+
+#toggleTheme:hover {        /* Efekt hover dla przycisku - zmienia kolor tła, gdy najedziemy na przycisk */
+    background-color: #555;
+    transform: translateY(0); /* Pokazuje przycisk w pełni po najechaniu */
+}
+
+
+
+#toggleTheme:active {       /* Jeśli przycisk jest naciśnięty (aktywny) */
+    background-color: #111;
 }
 
 /* Splash */
@@ -118,7 +190,8 @@ section {
 /* About */
 
 .about {
-    background: #fff;       
+    background: #fff;    
+    
 }
 
 .motivation {
@@ -130,27 +203,27 @@ section {
 /* Skills */
 
 .skills ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; 
+    list-style-type: none;      /* Usuwa domyślny styl listy */
+    margin: 0;       /* Zeruje margines */        
+    padding: 0;      /* Zeruje padding */
 }
 
  .skills ul li {
-    position: relative;
+    position: relative;     /* Pozycjonowanie względne dla elementów listy */
 }
 
 .skill-image {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;   
+    position: absolute;     /* Absolutne pozycjonowanie dla obrazów */
+    width: 50%;     /* Szerokość obrazka */
+    height: 100%;       /* Wysokość obrazka */
+    overflow: hidden;        /* Ukrywa elementy przekraczające obszar obrazka */  
 }
 
 .skill-image img {
     width: 100%; 
     height: 100%;
-    object-fit: cover;  
-    transition: all 1s;
+    object-fit: cover;        /* Obrazek wypełnia cały obszar zachowując proporcje */
+    transition: all 1s;     /* Płynna zmiana wszystkich właściwości w czasie 1s */
     cursor: pointer;
 }
 
@@ -179,16 +252,16 @@ section {
 /* Portfolio */
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0;
+    display: flex;      /* Ustawia flexbox */
+    flex-wrap: wrap;        /* Pozwala elementom opakowywać się */
+    width: 100%;        /* Szerokość rzędu */
+    margin: 0;      /* Zeruje margines */
     float: left;
-    padding: 0;
+    padding: 0;      /* Zeruje padding */
 }
 
 .portfolio-position {
-    width: 33.3333%;
+    width: 33.3333%;        /* Ustawia szerokość na 1/3 dostępnego miejsca */
     list-style-type: none;
 }
 
@@ -200,9 +273,9 @@ section {
 }
 
 .portfolio-image {
-    position: relative; 
-    width: auto;
-    height: 500px;
+    position: relative;      /* Pozycjonowanie względne dla obrazów */
+    width: auto;        /* Automatyczna szerokość */
+    height: 500px;       /* Ustawia wysokość obrazka */
 }
 
 .layer {
@@ -221,16 +294,19 @@ section {
     cursor: pointer;   
 }
 
+
 .layer button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FF0000;
     color: #FFFFFF;
     padding: 5px 20px;
     border-radius: 10px;
     cursor: pointer;
+    opacity: 0.5;
+    background: rgb(0,0,0,0.5);
+    transition: opacity 0.3s ease;
 }
 
 .portfolio-image:hover .layer {
@@ -242,33 +318,40 @@ section {
     color: #FFFFFF;
     padding: 5px 20px;
     border-radius: 10px;
-    cursor: pointer;    
+    cursor: pointer;
+    opacity: 0.4;
+    background: rgb(0,0,0,0.5);
+    transition: opacity 0.3s ease;
 }
 
 /* Contact */
 
 .contact {
-    background: #d2dae2;
+    background: #d2dae2;        /* Ustawia kolor tła dla sekcji kontaktowej */
 }
 
 .your-name, .your-email, .your-subject, .your-message {
-    margin-bottom: 15px;
-    border: 3px solid;
-    border-color: transparent;
+    margin-bottom: 15px;        /* Odstęp na dole pól formularza */
+    border: 3px solid;      /* Grubość obramowania pól */
+    border-color: transparent;      /* Kolor obramowania ustawiony na przezroczysty */
 }
 
 .submit-button {
-    background-color: #FF0000;
-    color: #FFFFFF;
-    padding: 5px 20px;
-    border-radius: 10px;
-    cursor: pointer;    
+    background-color: #FF0000;      /* Kolor tła dla przycisku "wyślij" */
+    color: #FFFFFF;     /* Kolor tekstu dla przycisku "wyślij" */
+    padding: 5px 20px;      /* Odstępy wewnątrz przycisku */
+    border-radius: 10px;        /* Zaokrąglone narożniki przycisku */
+    cursor: pointer;         /* Kursor wskazujący */   
+    opacity: 0.4;
+    background: rgb(0,0,0,0.5);
+    transition: opacity 0.3s ease;
 }
 
 /* Footer */
 
 .page-footer {
-    background: #242424;
-    padding: 5px 20px;
-    color: #fff    
+    background: #242424;        /* Kolor tła stopki */
+    padding: 5px 20px;      /* Odstępy wewnątrz stopki */
+    color: #fff         /* Kolor tekstu stopki */   
 }
+

@@ -7,10 +7,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&amp;family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="style.css">       
     </head>    
-    <body>
+    <body>                   
         <header class="splash">
+            <button id="toggleTheme">SAVE OUR PLANET (DAY/NIGHT)</button>  
             <div class="splash-inner">
                 <div class="container">
                     <i class="fa-regular fa-face-smile"></i>
@@ -62,7 +63,7 @@
                         </div>
                     </li>
                 </ul>
-            </div>        
+            </div>       
         </section>      
         <section class="portfolio">
             <h2 class="section-title">Portfolio</h2>
@@ -116,22 +117,28 @@
                     </div>
                 </li>
             </ul>
-                <button class="view-more-button">VIEW MORE</button>
-        </section>   
+                <button class="view-more-button">VIEW MORE</button>  
+        </section>  
         <section class="contact">
             <form>
                 <h2 class="section-title">Contact</h2>  
                 <input class="your-name" type="text" placeholder="Your name"><br>  
                 <input class="your-email" type="email" placeholder="Your email"><br>
                 <input class="your-subject" type="text" placeholder="Subject"><br>                               
-                <textarea class="your-message" rows="10" cols="17" placeholder="Type your message her"></textarea>             
+                <textarea class="your-message" rows="10" cols="17" placeholder="Type your message her"></textarea>               
             </form>
                 <button class="submit-button">SUBMIT</button>
         </section>       
         <footer class="page-footer">
-            <div class="contianer">
+            <div class="container">
                 <h4>&copy; Jerzy. All rights reserved.</h4>
             </div>
         </footer>
+            <script>
+                    const toggleButton = document.getElementById('toggleTheme');
+                    toggleButton.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                     });
+            </script>
     </body>
 </html>
